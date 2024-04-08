@@ -265,6 +265,7 @@ class Synthesizer(nn.Module):
         reference_wav=None,
         reference_speaker_name=None,
         split_sentences: bool = True,
+        speed=1.0,
         **kwargs,
     ) -> List[int]:
         """🐸 TTS magic. Run all the models and generate speech.
@@ -391,6 +392,7 @@ class Synthesizer(nn.Module):
                         d_vector=speaker_embedding,
                         speaker_wav=speaker_wav,
                         language=language_name,
+                        speed=speed,
                         **kwargs,
                     )
                 else:
