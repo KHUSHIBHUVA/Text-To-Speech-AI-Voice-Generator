@@ -260,8 +260,9 @@ class ModelManager(object):
     def _set_model_item(self, model_name):
         # fetch model info from the dict
         if "fairseq" in model_name:
+            model_attributes = model_name.split("/")
             model_type = "tts_models"
-            lang = model_name.split("/")[1]
+            lang = model_attributes[1]
             model_item = {
                 "model_type": "tts_models",
                 "license": "CC BY-NC 4.0",
@@ -270,6 +271,9 @@ class ModelManager(object):
                 "description": "this model is released by Meta under Fairseq repo. Visit https://github.com/facebookresearch/fairseq/tree/main/examples/mms for more info.",
             }
             model_item["model_name"] = model_name
+            dataset = model_attributes[2]
+            model = model_attributes[3]
+            
         elif "xtts" in model_name and len(model_name.split("/")) != 4:
             # loading xtts models with only model name (e.g. xtts_v2.0.2)
             # check model name has the version number with regex
