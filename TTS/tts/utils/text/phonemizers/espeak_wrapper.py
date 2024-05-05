@@ -111,7 +111,10 @@ class ESpeak(BasePhonemizer):
 
     def __init__(self, language: str, backend=None, punctuations=Punctuation.default_puncs(), keep_puncs=True):
         if self._ESPEAK_LIB is None:
-            raise Exception(" [!] No espeak backend found. Install espeak-ng or espeak to your system.")
+            raise Exception(
+                " [!] No espeak backend found. Install espeak-ng or espeak to your system. "
+                "See https://github.com/espeak-ng/espeak-ng/blob/master/docs/guide.md#installation"
+            )
         self.backend = self._ESPEAK_LIB
 
         # band-aid for backwards compatibility
