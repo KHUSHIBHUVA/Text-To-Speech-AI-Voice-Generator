@@ -137,6 +137,7 @@ Underlined "TTS*" and "Judy*" are **internal** 🐸TTS models that are not relea
 - WaveGrad: [paper](https://arxiv.org/abs/2009.00713)
 - HiFiGAN: [paper](https://arxiv.org/abs/2010.05646)
 - UnivNet: [paper](https://arxiv.org/abs/2106.07889)
+- Vocos: [paper](https://arxiv.org/abs/2306.00814)
 
 ### Voice Conversion
 - FreeVC: [paper](https://arxiv.org/abs/2210.15418)
