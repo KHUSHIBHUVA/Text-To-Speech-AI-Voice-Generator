@@ -156,6 +156,7 @@ If you plan to code or train models, clone 🐸TTS and install it locally.
 
 ```bash
 git clone https://github.com/coqui-ai/TTS
+cd TTS/
 pip install -e .[all,dev,notebooks]  # Select the relevant extras
 ```
 
